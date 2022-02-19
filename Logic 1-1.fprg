@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-18 09:42:45 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTQwTDQ3U1Y7MjAyMi0wMi0xODswODo0NzoyOSBQTTszMzE4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTQwTDQ3U1Y7MjAyMi0wMi0xODswOTo0Mjo0NSBQTTsxOzM0MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1" type="Real" array="False" size=""/>
+            <declare name="n2" type="Real" array="False" size=""/>
+            <declare name="s" type="Real" array="False" size=""/>
+            <declare name="p" type="Real" array="False" size=""/>
+            <declare name="d" type="Real" array="False" size=""/>
+            <input variable="n1"/>
+            <input variable="n2"/>
+            <assign variable="s" expression="n1 + n2"/>
+            <assign variable="p" expression="n1 * n2"/>
+            <assign variable="d" expression="n1 - n2"/>
+            <output expression="&quot;Sum is &quot; &amp; s" newline="True"/>
+            <output expression="&quot;Product is &quot; &amp; p" newline="True"/>
+            <output expression="&quot;Difference is &quot; &amp; d" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
