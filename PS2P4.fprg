@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-27 01:30:49 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1RQ0s5Rks7MjAyMi0wMi0yNzswMToxNjozOCBQTTszMzU3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1RQ0s5Rks7MjAyMi0wMi0yNzswMTozMDo0OSBQTTsxOzM0NjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credits" type="Real" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <declare name="fee" type="Real" array="False" size=""/>
+            <declare name="totaltuition" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter last name and credits being taken&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <input variable="credits"/>
+            <assign variable="tuition" expression="250"/>
+            <assign variable="fee" expression="100"/>
+            <assign variable="totaltuition" expression="(tuition * credits) + fee"/>
+            <output expression="lastname &amp; &quot;, &quot; &amp; &quot;$&quot; &amp; totaltuition" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
