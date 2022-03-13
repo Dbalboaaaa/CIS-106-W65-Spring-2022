@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-13 06:16:21 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyOVU5OVM7MjAyMi0wMy0xMzswMjo0NDo0MiBQTTszMzA0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUMyOVU5OVM7MjAyMi0wMy0xMzswNjoxNjoyMSBQTTsyOzM0MTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="bcost" type="Real" array="False" size=""/>
+            <declare name="ordertotal" type="Real" array="False" size=""/>
+            <declare name="scharge" type="Real" array="False" size=""/>
+            <declare name="comtotal" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter number of books to order&quot;" newline="True"/>
+            <input variable="qty"/>
+            <output expression="&quot;Enter cost per book&quot;" newline="True"/>
+            <input variable="bcost"/>
+            <assign variable="ordertotal" expression="qty * bcost"/>
+            <if expression="ordertotal &lt;= 50">
+                <then>
+                    <assign variable="scharge" expression="25"/>
+                </then>
+                <else>
+                    <assign variable="scharge" expression="0"/>
+                </else>
+            </if>
+            <assign variable="comtotal" expression="ordertotal + scharge"/>
+            <output expression="&quot;Total is &quot; &amp; ordertotal" newline="True"/>
+            <output expression="&quot;Shipping charge is &quot; &amp; scharge" newline="True"/>
+            <output expression="&quot;Total and Shipping charge combined &quot; &amp; comtotal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
