@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-20 03:20:02 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUc5TzM2TTg7MjAyMi0wMy0yMDswMjo1MTo1NCBQTTszMjky"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUc5TzM2TTg7MjAyMi0wMy0yMDswMzoyMDowMiBQTTsxOzMzOTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="partnumber" type="Integer" array="False" size=""/>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="totalcost" type="Real" array="False" size=""/>
+            <declare name="costpu" type="Real" array="False" size=""/>
+            <input variable="partnumber"/>
+            <input variable="quantity"/>
+            <if expression="partnumber = 10 or partnumber = 55">
+                <then>
+                    <assign variable="costpu" expression="1.00"/>
+                </then>
+                <else>
+                    <if expression="partnumber = 99">
+                        <then>
+                            <assign variable="costpu" expression="2.00"/>
+                        </then>
+                        <else>
+                            <if expression="partnumber = 80 or partnumber = 70">
+                                <then>
+                                    <assign variable="costpu" expression="3.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="costpu" expression="5.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="totalcost" expression="costpu * quantity"/>
+            <output expression="&quot;Part number is &quot; &amp; partnumber" newline="True"/>
+            <output expression="&quot;Cost per unit is &quot; &amp; costpu" newline="True"/>
+            <output expression="&quot;Total cost is &quot; &amp; totalcost" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
