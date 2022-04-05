@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-03 08:13:27 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhPVTk0Mk87MjAyMi0wNC0wMzswNzo0NzozNyBQTTszMzM0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhPVTk0Mk87MjAyMi0wNC0wMzswODoxMzoyNyBQTTsyOzM0MzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="size" type="Integer" array="False" size=""/>
+            <input variable="size"/>
+            <declare name="fib" type="Integer" array="True" size="size"/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <for variable="counter" start="0" end="size-1" direction="inc" step="1">
+                <if expression="counter = 0 or counter = 1">
+                    <then>
+                        <assign variable="fib[counter]" expression="counter"/>
+                    </then>
+                    <else>
+                        <assign variable="fib[counter]" expression="fib[counter-2] + fib[counter-1]"/>
+                    </else>
+                </if>
+                <output expression="fib[counter]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

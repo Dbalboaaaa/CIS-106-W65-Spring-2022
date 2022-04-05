@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-03 07:47:25 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhPVTk0Mk87MjAyMi0wNC0wMzswMTozMToyNyBQTTszMzIw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUhPVTk0Mk87MjAyMi0wNC0wMzswNzo0NzoyNSBQTTsxOzM0Mzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pamount" type="Real" array="False" size=""/>
+            <declare name="interestrate" type="Real" array="False" size=""/>
+            <declare name="annualinterest" type="Real" array="False" size=""/>
+            <declare name="ebalance" type="Real" array="False" size=""/>
+            <declare name="Year" type="Integer" array="False" size=""/>
+            <declare name="tinterest" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter principle amount&quot;" newline="True"/>
+            <input variable="pamount"/>
+            <output expression="&quot;Enter interest rate&quot;" newline="True"/>
+            <input variable="interestrate"/>
+            <for variable="Year" start="1" end="5" direction="inc" step="1">
+                <assign variable="annualinterest" expression="pamount * interestrate"/>
+                <assign variable="ebalance" expression="pamount + annualinterest"/>
+                <output expression="Year &amp; &quot;, &quot; &amp; pamount &amp; &quot;, &quot; &amp; annualinterest &amp; &quot;, &quot; &amp; ebalance" newline="True"/>
+                <assign variable="pamount" expression="ebalance"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
