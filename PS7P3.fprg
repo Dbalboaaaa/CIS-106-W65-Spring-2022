@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-10 09:37:20 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUYzTE81S0Q7MjAyMi0wNC0xMDswNjo1MTozMCBQTTszMzE3"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUYzTE81S0Q7MjAyMi0wNC0xMDswOTozNzoyMCBQTTsxOzM0MzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="city" type="String" array="False" size=""/>
+            <declare name="miles" type="Real" array="False" size=""/>
+            <declare name="gallonsused" type="Real" array="False" size=""/>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <input variable="city"/>
+            <input variable="miles"/>
+            <input variable="gallonsused"/>
+            <call expression="compmilespergallon(miles,gallonsused)"/>
+            <call expression="compcost(gallonsused)"/>
+            <assign variable="cost" expression="compcost(gallonsused)"/>
+            <output expression="city" newline="True"/>
+            <output expression="miles" newline="True"/>
+            <output expression="cost" newline="True"/>
+        </body>
+    </function>
+    <function name="compcost" type="Real" variable="cost">
+        <parameters>
+            <parameter name="gallonsused" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="cost" type="Real" array="False" size=""/>
+            <assign variable="cost" expression="gallonsused * 2.50"/>
+        </body>
+    </function>
+    <function name="compmilespergallon" type="Real" variable="milespergallon">
+        <parameters>
+            <parameter name="miles" type="Real" array="False"/>
+            <parameter name="gallonsused" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="milespergallon" type="Real" array="False" size=""/>
+            <assign variable="milespergallon" expression="miles / gallonsused"/>
+        </body>
+    </function>
+</flowgorithm>

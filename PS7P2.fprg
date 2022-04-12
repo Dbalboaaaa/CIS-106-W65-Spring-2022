@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-10 06:51:11 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUYzTE81S0Q7MjAyMi0wNC0xMDswNTozMTo0NCBQTTszMzE5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUYzTE81S0Q7MjAyMi0wNC0xMDswNjo1MToxMSBQTTsxOzM0MjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="numbofhits" type="Integer" array="False" size=""/>
+            <declare name="numbofbats" type="Integer" array="False" size=""/>
+            <declare name="battingavg" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="numbofhits"/>
+            <input variable="numbofbats"/>
+            <call expression="compbattingavg(lastname,numbofhits,numbofbats)"/>
+            <assign variable="battingavg" expression="compbattingavg(lastname,numbofhits,numbofbats)"/>
+            <output expression="battingavg" newline="True"/>
+        </body>
+    </function>
+    <function name="compbattingavg" type="Real" variable="battingavg">
+        <parameters>
+            <parameter name="lastname" type="String" array="False"/>
+            <parameter name="numbofhits" type="Integer" array="False"/>
+            <parameter name="numbofbats" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="battingavg" type="Real" array="False" size=""/>
+            <assign variable="battingavg" expression="numbofhits / numbofbats"/>
+        </body>
+    </function>
+</flowgorithm>

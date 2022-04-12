@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-11 03:59:06 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUY1TFBBTzA7MjAyMi0wNC0xMTswMzoxNjowMiBQTTszMzE0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUY1TFBBTzA7MjAyMi0wNC0xMTswMzo1OTowNiBQTTsxOzM0MzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credithrs" type="Real" array="False" size=""/>
+            <declare name="districtcode" type="String" array="False" size=""/>
+            <declare name="tuitionowed" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="credithrs"/>
+            <input variable="districtcode"/>
+            <call expression="comptuitionowed(credithrs,districtcode)"/>
+            <assign variable="tuitionowed" expression="comptuitionowed(credithrs,districtcode)"/>
+            <output expression="lastname" newline="True"/>
+            <output expression="tuitionowed" newline="True"/>
+        </body>
+    </function>
+    <function name="comptuitionowed" type="Real" variable="tuitionowed">
+        <parameters>
+            <parameter name="credithrs" type="Real" array="False"/>
+            <parameter name="districtcode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tuitionowed" type="Real" array="False" size=""/>
+            <if expression="districtcode = &quot;I&quot;">
+                <then>
+                    <assign variable="tuitionowed" expression="250 * credithrs"/>
+                </then>
+                <else>
+                    <assign variable="tuitionowed" expression="550 * credithrs"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
